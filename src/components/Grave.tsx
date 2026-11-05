@@ -30,7 +30,7 @@ export default function Grave({ position, rotation, scale }: GraveProps) {
     const [graveColor, graveARM, graveNormal] = graveTextures
 
     return (
-        <mesh position={position} rotation={rotation} scale={scale}>
+        <mesh position={position} rotation={rotation} scale={scale} castShadow receiveShadow>
             <boxGeometry args={[0.6, 0.8, 0.2]} />
             <meshStandardMaterial
                 map={graveColor}

@@ -29,7 +29,7 @@ export default function Floor() {
     const [floorColor, floorARM, floorNormal, floorDisplacement] = textures
 
     return (
-        <mesh rotation-x={-Math.PI * 0.5}>
+        <mesh rotation-x={-Math.PI * 0.5} receiveShadow>
             <planeGeometry args={[20, 20, 100, 100]} />
             <meshStandardMaterial
                 map={floorColor}

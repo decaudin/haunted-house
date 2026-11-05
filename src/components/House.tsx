@@ -51,7 +51,7 @@ export default function House() {
 
     return (
         <>
-            <mesh position-y={1.25}>
+            <mesh position-y={1.25} castShadow receiveShadow>
                 <boxGeometry args={[4, 2.5, 4]} />
                 <meshStandardMaterial
                     map={wallColor}
@@ -62,7 +62,7 @@ export default function House() {
                 />
             </mesh>
 
-            <mesh position-y={3.25} rotation-y={Math.PI * 0.25}>
+            <mesh position-y={3.25} rotation-y={Math.PI * 0.25} castShadow>
                 <coneGeometry args={[3.5, 1.5, 4]} />
                 <meshStandardMaterial
                     map={roofColor}
@@ -73,7 +73,7 @@ export default function House() {
                 />
             </mesh>
 
-            <mesh position={[0, 1, 2.01]}>
+            <mesh position={[0, 1, 2.01]} receiveShadow>
                 <planeGeometry args={[2.2, 2.2, 100, 100]} />
                 <meshStandardMaterial
                     map={doorColor}
@@ -88,7 +88,7 @@ export default function House() {
                     metalnessMap={doorMetalnessTexture}
                 />
             </mesh>
-            
+
             <Bush position={[0.8, 0.2, 2.2]} scale={0.5} />
 
             <Bush position={[1.4, 0.1, 2.1]} scale={0.25} />
